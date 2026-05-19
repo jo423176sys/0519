@@ -10,11 +10,11 @@ with col_left:
 with col_right: 
     st.write("###  設定區") 
     with st.container(border=True): 
-    tab1, tab2 = st.tabs(["本月行程", "已封存行程"])
-    with tab1: 
-        st.header("本月行程") 
-        st.write("本月")
-    with tab2: 
-        st.header("已封存行程") 
-        st.write("已封存")
-    
+        tab1, tab2 = st.tabs(["本月行程", "已封存行程"])
+        with tab1: 
+            st.header("本月行程") 
+            st.write("本月")
+        with tab2: 
+            st.header("已封存行程") 
+            st.write("已封存")
+        
