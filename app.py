@@ -7,9 +7,8 @@ with st.sidebar:
     st.radio("選擇群組", ["工作", "家庭"])
 
 segmented_control
-    st.button("按鈕 A")
-    st.write("")  # 塞入一行空白間距
-    st.button("按鈕 B")
+    st.button("右")
+    st.button("左")
 
 col_left, col_right = st.columns([1, 1], gap="large")
 with col_left: 
