@@ -1,10 +1,12 @@
 import streamlit as st
+import datetime
+
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
 with st.sidebar:
     st.write("###  行事曆群組")
     st.radio("選擇群組", ["工作", "家庭"])
 
-col_left, col_right = st.columns([1, 3], gap="large")
+col_left, col_right = st.columns([1, 2], gap="large")
 with col_left: 
     st.write("###  新增行程") 
     txt=st.text_input("時間:09:00")
@@ -13,6 +15,9 @@ with col_left:
         def showadd():
             st.write("新增成功")
         showadd()
+    today = st.date_input("選擇日期", datetime.date.today())
+    meeting_time = st.time_input("選擇時間")
+    my_color = st.color_picker("挑選辨識顏色","#1A73E8")
 
 
 with col_right: 
