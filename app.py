@@ -9,6 +9,7 @@ with col_left:
 
 with col_right: 
     st.write("###  設定區") 
+    with st.container(border=True): 
     tab1, tab2 = st.tabs(["本月行程", "已封存行程"])
     with tab1: 
         st.header("本月") 
@@ -16,4 +17,4 @@ with col_right:
     with tab2: 
         st.header("已封存") 
         st.write("已封存")
-     with st.container(border=True): 
+    
