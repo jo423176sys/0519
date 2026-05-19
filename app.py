@@ -2,7 +2,7 @@ import streamlit as st
 import datetime
 
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
-mode = st.radio("選擇群組",["學生","老師","家長"],=True)
+mode = st.radio("選擇群組",["學生","老師","家長"],horizontal=True)
 
 col_left, col_right = st.columns([1, 1], gap="large")
 with col_left: 
