@@ -2,19 +2,27 @@ import streamlit as st
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
 with st.sidebar:
     st.write("###  行事曆群組")
-    
+    st.radio("選擇群組", ["工作", "家庭"])
+
 col_left, col_right = st.columns([1, 3], gap="large")
 with col_left: 
     st.write("###  新增行程") 
+    txt=st.text_input("時間:09:00")
+    if st.button("新增行程"):
+        @st.dialog("新增完成")
+        def showadd():
+            st.write("新增成功")
+        showadd()
+
 
 with col_right: 
     st.write("###  設定區") 
-    with st.container(border=True): 
-        tab1, tab2 = st.tabs(["本月行程", "已封存行程"])
-        with tab1: 
-            st.header("本月行程") 
-            st.write("本月")
+    tab1, tab2 = st.tabs(["本月行程", "已封存行程"])
+    with tab1: 
+        with st.container(border=True):
+             with st.container(border=True):
+                st.header("本月行程") 
         with tab2: 
-            st.header("已封存行程") 
-            st.write("已封存")
+            with st.container(border=True):
+                st.header("已封存行程") 
         
