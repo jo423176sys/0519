@@ -26,3 +26,8 @@ tag = st.pills(
   "行程屬性",
   ["#工作", "#家庭", "#緊急"]
 )
+
+is_open = st.toggle(
+  "開啟 24H 郵件自動發信通知",
+  value=True
+)
