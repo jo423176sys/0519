@@ -6,10 +6,6 @@ with st.sidebar:
     st.write("###  行事曆群組")
     st.radio("選擇群組", ["工作", "家庭"])
 
-segmented_control
-    st.button("右")
-    st.button("左")
-
 col_left, col_right = st.columns([1, 1], gap="large")
 with col_left: 
     st.write("###  新增行程") 
@@ -21,4 +17,9 @@ with col_right:
     today = st.date_input("選擇日期", datetime.date.today())
     meeting_time = st.time_input("選擇時間")
 
+view = st.segmented_control(
+  "檢視模式",
+  ["月視角", "週視角"],
+  default="月視角"
+)
     
