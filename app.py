@@ -2,9 +2,7 @@ import streamlit as st
 import datetime
 
 st.set_page_config(page_title="微型 TimeTree", layout="wide")
-with st.sidebar:
-    st.write("###  行事曆群組")
-    st.radio("選擇群組", ["工作", "家庭"])
+mode = st.radio("選擇群組",["學生","老師","家長"],True)
 
 col_left, col_right = st.columns([1, 1], gap="large")
 with col_left: 
@@ -23,3 +21,7 @@ view = st.segmented_control(
   default="月視角"
 )
     
+tag = st.pills(
+  "行程屬性",
+  ["#工作", "#家庭", "#緊急"]
+)
