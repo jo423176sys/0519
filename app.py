@@ -6,15 +6,16 @@ mode = st.radio("選擇群組",["學生","老師","家長"],horizontal=True)
 
 col_left, col_right = st.columns([1, 1], gap="large")
 with col_left: 
-    st.write("###  新增行程") 
-    txt=st.text_input("行程主旨")
-    my_color = st.color_picker("挑選辨識顏色","#1A73E8")
+    st.text_input("行程主旨")
+    my_color = st.color_picker("顏色設定")
 
 with col_right: 
-    st.write("###  設定區") 
-    today = st.date_input("選擇日期", datetime.date.today())
-    meeting_time = st.time_input("選擇時間")
-
+    st.date_input("選擇日期", datetime.date.today())
+    st.time_input("選擇時間")
+    
+with st.popover("快速進階篩選"):
+    st.checkbox("隱藏已過期行程")
+    
 view = st.segmented_control(
   "檢視模式",
   ["月視角", "週視角"],
